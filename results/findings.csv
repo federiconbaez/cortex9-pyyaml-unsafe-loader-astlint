@@ -1,0 +1,176 @@
+pyyaml_version,path,line,col,call,resolution,effective_loader,policy,cve_2017_18342,cve_2020_1747,cve_2020_14343,notes
+unknown,f01_safe_load.py,5,11,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+unknown,f02_load_safeloader_kw.py,5,11,yaml.load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+unknown,f03_load_fullloader_kw.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,UNKNOWN_VERSION,UNKNOWN_VERSION,
+unknown,f04_full_load.py,5,11,yaml.full_load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,UNKNOWN_VERSION,UNKNOWN_VERSION,
+unknown,f05_unsafe_load.py,5,11,yaml.unsafe_load,RESOLVED,UnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+unknown,f06_load_loader_class.py,5,11,yaml.load,RESOLVED,Loader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+unknown,f07_load_no_loader.py,5,11,yaml.load,RESOLVED,,DEPENDS_ON_VERSION,UNKNOWN_VERSION,UNKNOWN_VERSION,UNKNOWN_VERSION,"default Loader depends on version: Loader (<5.1), FullLoader (5.1..5.x), required (6.0+)"
+unknown,f08_import_alias.py,5,11,y.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,UNKNOWN_VERSION,UNKNOWN_VERSION,
+unknown,f09_from_import_alias.py,6,11,l,RESOLVED,UnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+unknown,f10_shadowed_module.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+unknown,f11_shadowed_function.py,10,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'load' is bound more than once (shadowing or rebinding)
+unknown,f12_star_import.py,5,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,'load' may come from 'from yaml import *'
+unknown,f13_dynamic_loader.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NOT_APPLICABLE,NEEDS_HUMAN,NEEDS_HUMAN,Loader is not a statically known PyYAML loader: loader_cls
+unknown,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
+unknown,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
+unknown,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+unknown,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,UNKNOWN_VERSION,UNKNOWN_VERSION,CFullLoader uses FullConstructor (yaml/cyaml.py)
+unknown,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+unknown,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,UNKNOWN_VERSION,UNKNOWN_VERSION,direct Loader construction
+unknown,f19_loader_none.py,5,11,yaml.load,RESOLVED,,DEPENDS_ON_VERSION,UNKNOWN_VERSION,UNKNOWN_VERSION,UNKNOWN_VERSION,"explicit Loader=None; default Loader depends on version: Loader (<5.1), FullLoader (5.1..5.x), required (6.0+)"
+unknown,f20_not_executed.py,7,0,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+unknown,f21_load_all_baseloader.py,5,16,load_all,RESOLVED,BaseLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+unknown,f22_module_rebound.py,7,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+unknown,f23_importlib.py,5,10,importlib.import_module,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,importlib.import_module of yaml
+unknown,f24_cyaml_submodule.py,6,11,yaml.load,RESOLVED,CUnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+3.13,f01_safe_load.py,5,11,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+3.13,f02_load_safeloader_kw.py,5,11,yaml.load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+3.13,f03_load_fullloader_kw.py,5,11,yaml.load,RESOLVED,FullLoader,NOT_IN_VERSION,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,FullLoader does not exist in PyYAML 3.13
+3.13,f04_full_load.py,5,11,yaml.full_load,RESOLVED,,NOT_IN_VERSION,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,full_load does not exist in PyYAML 3.13
+3.13,f05_unsafe_load.py,5,11,yaml.unsafe_load,RESOLVED,,NOT_IN_VERSION,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,unsafe_load does not exist in PyYAML 3.13
+3.13,f06_load_loader_class.py,5,11,yaml.load,RESOLVED,Loader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+3.13,f07_load_no_loader.py,5,11,yaml.load,RESOLVED,Loader,UNSAFE_BY_DESIGN,AFFECTED,NOT_APPLICABLE,NOT_APPLICABLE,default Loader=Loader (pre-5.1 signature)
+3.13,f08_import_alias.py,5,11,y.load,RESOLVED,FullLoader,NOT_IN_VERSION,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,FullLoader does not exist in PyYAML 3.13
+3.13,f09_from_import_alias.py,6,11,l,RESOLVED,UnsafeLoader,NOT_IN_VERSION,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,UnsafeLoader does not exist in PyYAML 3.13
+3.13,f10_shadowed_module.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+3.13,f11_shadowed_function.py,10,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'load' is bound more than once (shadowing or rebinding)
+3.13,f12_star_import.py,5,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,'load' may come from 'from yaml import *'
+3.13,f13_dynamic_loader.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NOT_APPLICABLE,NEEDS_HUMAN,NEEDS_HUMAN,Loader is not a statically known PyYAML loader: loader_cls
+3.13,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
+3.13,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
+3.13,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+3.13,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,NOT_IN_VERSION,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,CFullLoader does not exist in PyYAML 3.13
+3.13,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+3.13,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,NOT_IN_VERSION,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,direct Loader construction; FullLoader does not exist in PyYAML 3.13
+3.13,f19_loader_none.py,5,11,yaml.load,RESOLVED,,TYPE_ERROR_IN_VERSION,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,explicit Loader=None; default Loader=Loader (pre-5.1 signature); Loader=None is called as a class: TypeError
+3.13,f20_not_executed.py,7,0,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+3.13,f21_load_all_baseloader.py,5,16,load_all,RESOLVED,BaseLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+3.13,f22_module_rebound.py,7,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+3.13,f23_importlib.py,5,10,importlib.import_module,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,importlib.import_module of yaml
+3.13,f24_cyaml_submodule.py,6,11,yaml.load,RESOLVED,CUnsafeLoader,NOT_IN_VERSION,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,CUnsafeLoader does not exist in PyYAML 3.13
+5.1,f01_safe_load.py,5,11,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.1,f02_load_safeloader_kw.py,5,11,yaml.load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.1,f03_load_fullloader_kw.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,
+5.1,f04_full_load.py,5,11,yaml.full_load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,
+5.1,f05_unsafe_load.py,5,11,yaml.unsafe_load,RESOLVED,UnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.1,f06_load_loader_class.py,5,11,yaml.load,RESOLVED,Loader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.1,f07_load_no_loader.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_AFFECTED,AFFECTED,AFFECTED,Loader=None defaults to FullLoader with a warning (5.1 to 5.x signature)
+5.1,f08_import_alias.py,5,11,y.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,
+5.1,f09_from_import_alias.py,6,11,l,RESOLVED,UnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.1,f10_shadowed_module.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+5.1,f11_shadowed_function.py,10,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'load' is bound more than once (shadowing or rebinding)
+5.1,f12_star_import.py,5,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,'load' may come from 'from yaml import *'
+5.1,f13_dynamic_loader.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NOT_APPLICABLE,NEEDS_HUMAN,NEEDS_HUMAN,Loader is not a statically known PyYAML loader: loader_cls
+5.1,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
+5.1,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
+5.1,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.1,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,CFullLoader uses FullConstructor (yaml/cyaml.py)
+5.1,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.1,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,direct Loader construction
+5.1,f19_loader_none.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_AFFECTED,AFFECTED,AFFECTED,explicit Loader=None; Loader=None defaults to FullLoader with a warning (5.1 to 5.x signature)
+5.1,f20_not_executed.py,7,0,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.1,f21_load_all_baseloader.py,5,16,load_all,RESOLVED,BaseLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.1,f22_module_rebound.py,7,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+5.1,f23_importlib.py,5,10,importlib.import_module,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,importlib.import_module of yaml
+5.1,f24_cyaml_submodule.py,6,11,yaml.load,RESOLVED,CUnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3,f01_safe_load.py,5,11,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3,f02_load_safeloader_kw.py,5,11,yaml.load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3,f03_load_fullloader_kw.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,
+5.3,f04_full_load.py,5,11,yaml.full_load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,
+5.3,f05_unsafe_load.py,5,11,yaml.unsafe_load,RESOLVED,UnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3,f06_load_loader_class.py,5,11,yaml.load,RESOLVED,Loader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3,f07_load_no_loader.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_AFFECTED,AFFECTED,AFFECTED,Loader=None defaults to FullLoader with a warning (5.1 to 5.x signature)
+5.3,f08_import_alias.py,5,11,y.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,
+5.3,f09_from_import_alias.py,6,11,l,RESOLVED,UnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3,f10_shadowed_module.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+5.3,f11_shadowed_function.py,10,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'load' is bound more than once (shadowing or rebinding)
+5.3,f12_star_import.py,5,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,'load' may come from 'from yaml import *'
+5.3,f13_dynamic_loader.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NOT_APPLICABLE,NEEDS_HUMAN,NEEDS_HUMAN,Loader is not a statically known PyYAML loader: loader_cls
+5.3,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
+5.3,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
+5.3,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,CFullLoader uses FullConstructor (yaml/cyaml.py)
+5.3,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,direct Loader construction
+5.3,f19_loader_none.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_AFFECTED,AFFECTED,AFFECTED,explicit Loader=None; Loader=None defaults to FullLoader with a warning (5.1 to 5.x signature)
+5.3,f20_not_executed.py,7,0,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3,f21_load_all_baseloader.py,5,16,load_all,RESOLVED,BaseLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3,f22_module_rebound.py,7,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+5.3,f23_importlib.py,5,10,importlib.import_module,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,importlib.import_module of yaml
+5.3,f24_cyaml_submodule.py,6,11,yaml.load,RESOLVED,CUnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3.1,f01_safe_load.py,5,11,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3.1,f02_load_safeloader_kw.py,5,11,yaml.load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3.1,f03_load_fullloader_kw.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,AFFECTED,
+5.3.1,f04_full_load.py,5,11,yaml.full_load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,AFFECTED,
+5.3.1,f05_unsafe_load.py,5,11,yaml.unsafe_load,RESOLVED,UnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3.1,f06_load_loader_class.py,5,11,yaml.load,RESOLVED,Loader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3.1,f07_load_no_loader.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_AFFECTED,NOT_AFFECTED,AFFECTED,Loader=None defaults to FullLoader with a warning (5.1 to 5.x signature)
+5.3.1,f08_import_alias.py,5,11,y.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,AFFECTED,
+5.3.1,f09_from_import_alias.py,6,11,l,RESOLVED,UnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3.1,f10_shadowed_module.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+5.3.1,f11_shadowed_function.py,10,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'load' is bound more than once (shadowing or rebinding)
+5.3.1,f12_star_import.py,5,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,'load' may come from 'from yaml import *'
+5.3.1,f13_dynamic_loader.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NOT_APPLICABLE,NEEDS_HUMAN,NEEDS_HUMAN,Loader is not a statically known PyYAML loader: loader_cls
+5.3.1,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
+5.3.1,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
+5.3.1,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3.1,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,AFFECTED,CFullLoader uses FullConstructor (yaml/cyaml.py)
+5.3.1,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3.1,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,AFFECTED,direct Loader construction
+5.3.1,f19_loader_none.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_AFFECTED,NOT_AFFECTED,AFFECTED,explicit Loader=None; Loader=None defaults to FullLoader with a warning (5.1 to 5.x signature)
+5.3.1,f20_not_executed.py,7,0,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3.1,f21_load_all_baseloader.py,5,16,load_all,RESOLVED,BaseLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.3.1,f22_module_rebound.py,7,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+5.3.1,f23_importlib.py,5,10,importlib.import_module,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,importlib.import_module of yaml
+5.3.1,f24_cyaml_submodule.py,6,11,yaml.load,RESOLVED,CUnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.4,f01_safe_load.py,5,11,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.4,f02_load_safeloader_kw.py,5,11,yaml.load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.4,f03_load_fullloader_kw.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,
+5.4,f04_full_load.py,5,11,yaml.full_load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,
+5.4,f05_unsafe_load.py,5,11,yaml.unsafe_load,RESOLVED,UnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.4,f06_load_loader_class.py,5,11,yaml.load,RESOLVED,Loader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.4,f07_load_no_loader.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_AFFECTED,NOT_AFFECTED,NOT_AFFECTED,Loader=None defaults to FullLoader with a warning (5.1 to 5.x signature)
+5.4,f08_import_alias.py,5,11,y.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,
+5.4,f09_from_import_alias.py,6,11,l,RESOLVED,UnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.4,f10_shadowed_module.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+5.4,f11_shadowed_function.py,10,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'load' is bound more than once (shadowing or rebinding)
+5.4,f12_star_import.py,5,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,'load' may come from 'from yaml import *'
+5.4,f13_dynamic_loader.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NOT_APPLICABLE,NEEDS_HUMAN,NEEDS_HUMAN,Loader is not a statically known PyYAML loader: loader_cls
+5.4,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
+5.4,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
+5.4,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.4,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,CFullLoader uses FullConstructor (yaml/cyaml.py)
+5.4,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.4,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,direct Loader construction
+5.4,f19_loader_none.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_AFFECTED,NOT_AFFECTED,NOT_AFFECTED,explicit Loader=None; Loader=None defaults to FullLoader with a warning (5.1 to 5.x signature)
+5.4,f20_not_executed.py,7,0,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.4,f21_load_all_baseloader.py,5,16,load_all,RESOLVED,BaseLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+5.4,f22_module_rebound.py,7,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+5.4,f23_importlib.py,5,10,importlib.import_module,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,importlib.import_module of yaml
+5.4,f24_cyaml_submodule.py,6,11,yaml.load,RESOLVED,CUnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+6.0,f01_safe_load.py,5,11,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+6.0,f02_load_safeloader_kw.py,5,11,yaml.load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+6.0,f03_load_fullloader_kw.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,
+6.0,f04_full_load.py,5,11,yaml.full_load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,
+6.0,f05_unsafe_load.py,5,11,yaml.unsafe_load,RESOLVED,UnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+6.0,f06_load_loader_class.py,5,11,yaml.load,RESOLVED,Loader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+6.0,f07_load_no_loader.py,5,11,yaml.load,RESOLVED,,TYPE_ERROR_IN_VERSION,NOT_AFFECTED,NOT_APPLICABLE,NOT_APPLICABLE,Loader is a required argument in 6.0+
+6.0,f08_import_alias.py,5,11,y.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,
+6.0,f09_from_import_alias.py,6,11,l,RESOLVED,UnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+6.0,f10_shadowed_module.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+6.0,f11_shadowed_function.py,10,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'load' is bound more than once (shadowing or rebinding)
+6.0,f12_star_import.py,5,11,load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,'load' may come from 'from yaml import *'
+6.0,f13_dynamic_loader.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NOT_APPLICABLE,NEEDS_HUMAN,NEEDS_HUMAN,Loader is not a statically known PyYAML loader: loader_cls
+6.0,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
+6.0,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
+6.0,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+6.0,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,CFullLoader uses FullConstructor (yaml/cyaml.py)
+6.0,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+6.0,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,direct Loader construction
+6.0,f19_loader_none.py,5,11,yaml.load,RESOLVED,,TYPE_ERROR_IN_VERSION,NOT_AFFECTED,NOT_APPLICABLE,NOT_APPLICABLE,explicit Loader=None; Loader is a required argument in 6.0+
+6.0,f20_not_executed.py,7,0,yaml.safe_load,RESOLVED,SafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+6.0,f21_load_all_baseloader.py,5,16,load_all,RESOLVED,BaseLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
+6.0,f22_module_rebound.py,7,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,name 'yaml' is bound more than once (shadowing or rebinding)
+6.0,f23_importlib.py,5,10,importlib.import_module,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,importlib.import_module of yaml
+6.0,f24_cyaml_submodule.py,6,11,yaml.load,RESOLVED,CUnsafeLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,

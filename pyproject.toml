@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cortex9-pyyaml-unsafe-loader-astlint"
+version = "0.1.0"
+description = "Static AST check of PyYAML loader usage with a per-version CVE model"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+pyyaml-loader-lint = "pyyaml_loader_lint.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

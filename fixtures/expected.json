@@ -1,0 +1,805 @@
+{
+ "_comment": "Hand-written expectations; columns are policy, CVE-2017-18342, CVE-2020-1747, CVE-2020-14343. Files absent here (f18) must produce no finding.",
+ "expected": {
+  "f01_safe_load.py:5": {
+   "unknown": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "3.13": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.4": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "6.0": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ]
+  },
+  "f02_load_safeloader_kw.py:5": {
+   "unknown": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "3.13": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.4": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "6.0": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ]
+  },
+  "f03_load_fullloader_kw.py:5": {
+   "unknown": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "UNKNOWN_VERSION",
+    "UNKNOWN_VERSION"
+   ],
+   "3.13": [
+    "NOT_IN_VERSION",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "AFFECTED",
+    "AFFECTED"
+   ],
+   "5.4": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED"
+   ],
+   "6.0": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED"
+   ]
+  },
+  "f04_full_load.py:5": {
+   "unknown": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "UNKNOWN_VERSION",
+    "UNKNOWN_VERSION"
+   ],
+   "3.13": [
+    "NOT_IN_VERSION",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "AFFECTED",
+    "AFFECTED"
+   ],
+   "5.4": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED"
+   ],
+   "6.0": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED"
+   ]
+  },
+  "f05_unsafe_load.py:5": {
+   "unknown": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "3.13": [
+    "NOT_IN_VERSION",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.4": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "6.0": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ]
+  },
+  "f06_load_loader_class.py:5": {
+   "unknown": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "3.13": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.4": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "6.0": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ]
+  },
+  "f07_load_no_loader.py:5": {
+   "unknown": [
+    "DEPENDS_ON_VERSION",
+    "UNKNOWN_VERSION",
+    "UNKNOWN_VERSION",
+    "UNKNOWN_VERSION"
+   ],
+   "3.13": [
+    "UNSAFE_BY_DESIGN",
+    "AFFECTED",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "CONSERVATIVE_WARN",
+    "NOT_AFFECTED",
+    "AFFECTED",
+    "AFFECTED"
+   ],
+   "5.4": [
+    "CONSERVATIVE_WARN",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED"
+   ],
+   "6.0": [
+    "TYPE_ERROR_IN_VERSION",
+    "NOT_AFFECTED",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ]
+  },
+  "f08_import_alias.py:5": {
+   "unknown": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "UNKNOWN_VERSION",
+    "UNKNOWN_VERSION"
+   ],
+   "3.13": [
+    "NOT_IN_VERSION",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "AFFECTED",
+    "AFFECTED"
+   ],
+   "5.4": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED"
+   ],
+   "6.0": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED"
+   ]
+  },
+  "f09_from_import_alias.py:6": {
+   "unknown": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "3.13": [
+    "NOT_IN_VERSION",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.4": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "6.0": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ]
+  },
+  "f10_shadowed_module.py:5": {
+   "unknown": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "3.13": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.3": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.4": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "6.0": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ]
+  },
+  "f11_shadowed_function.py:10": {
+   "unknown": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "3.13": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.3": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.4": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "6.0": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ]
+  },
+  "f12_star_import.py:5": {
+   "unknown": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "3.13": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.3": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.4": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "6.0": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ]
+  },
+  "f13_dynamic_loader.py:5": {
+   "unknown": [
+    "NEEDS_HUMAN",
+    "NOT_APPLICABLE",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "3.13": [
+    "NEEDS_HUMAN",
+    "NOT_APPLICABLE",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.3": [
+    "NEEDS_HUMAN",
+    "NOT_APPLICABLE",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.4": [
+    "NEEDS_HUMAN",
+    "NOT_APPLICABLE",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "6.0": [
+    "NEEDS_HUMAN",
+    "NOT_APPLICABLE",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ]
+  },
+  "f14_kwargs.py:5": {
+   "unknown": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "3.13": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.3": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.4": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "6.0": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ]
+  },
+  "f15_getattr.py:5": {
+   "unknown": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "3.13": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.3": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.4": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "6.0": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ]
+  },
+  "f16_cyaml_loaders.py:5": {
+   "unknown": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "3.13": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.4": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "6.0": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ]
+  },
+  "f16_cyaml_loaders.py:9": {
+   "unknown": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "UNKNOWN_VERSION",
+    "UNKNOWN_VERSION"
+   ],
+   "3.13": [
+    "NOT_IN_VERSION",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "AFFECTED",
+    "AFFECTED"
+   ],
+   "5.4": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED"
+   ],
+   "6.0": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED"
+   ]
+  },
+  "f16_cyaml_loaders.py:13": {
+   "unknown": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "3.13": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.4": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "6.0": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ]
+  },
+  "f17_direct_construction.py:5": {
+   "unknown": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "UNKNOWN_VERSION",
+    "UNKNOWN_VERSION"
+   ],
+   "3.13": [
+    "NOT_IN_VERSION",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "AFFECTED",
+    "AFFECTED"
+   ],
+   "5.4": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED"
+   ],
+   "6.0": [
+    "CONSERVATIVE_WARN",
+    "NOT_APPLICABLE",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED"
+   ]
+  },
+  "f19_loader_none.py:5": {
+   "unknown": [
+    "DEPENDS_ON_VERSION",
+    "UNKNOWN_VERSION",
+    "UNKNOWN_VERSION",
+    "UNKNOWN_VERSION"
+   ],
+   "3.13": [
+    "TYPE_ERROR_IN_VERSION",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "CONSERVATIVE_WARN",
+    "NOT_AFFECTED",
+    "AFFECTED",
+    "AFFECTED"
+   ],
+   "5.4": [
+    "CONSERVATIVE_WARN",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED",
+    "NOT_AFFECTED"
+   ],
+   "6.0": [
+    "TYPE_ERROR_IN_VERSION",
+    "NOT_AFFECTED",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ]
+  },
+  "f20_not_executed.py:7": {
+   "unknown": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "3.13": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.4": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "6.0": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ]
+  },
+  "f21_load_all_baseloader.py:5": {
+   "unknown": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "3.13": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.4": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "6.0": [
+    "SAFE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ]
+  },
+  "f22_module_rebound.py:7": {
+   "unknown": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "3.13": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.3": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.4": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "6.0": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ]
+  },
+  "f23_importlib.py:5": {
+   "unknown": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "3.13": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.3": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "5.4": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ],
+   "6.0": [
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN",
+    "NEEDS_HUMAN"
+   ]
+  },
+  "f24_cyaml_submodule.py:6": {
+   "unknown": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "3.13": [
+    "NOT_IN_VERSION",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.3": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "5.4": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ],
+   "6.0": [
+    "UNSAFE_BY_DESIGN",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE",
+    "NOT_APPLICABLE"
+   ]
+  }
+ }
+}
