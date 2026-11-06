@@ -15,7 +15,7 @@ unknown,f13_dynamic_loader.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NOT_APPLIC
 unknown,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
 unknown,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
 unknown,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
-unknown,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,UNKNOWN_VERSION,UNKNOWN_VERSION,CFullLoader uses FullConstructor (yaml/cyaml.py)
+unknown,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,UNKNOWN_VERSION,UNKNOWN_VERSION,INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader
 unknown,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
 unknown,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,UNKNOWN_VERSION,UNKNOWN_VERSION,direct Loader construction
 unknown,f19_loader_none.py,5,11,yaml.load,RESOLVED,,DEPENDS_ON_VERSION,UNKNOWN_VERSION,UNKNOWN_VERSION,UNKNOWN_VERSION,"explicit Loader=None; default Loader depends on version: Loader (<5.1), FullLoader (5.1..5.x), required (6.0+)"
@@ -65,7 +65,7 @@ unknown,f24_cyaml_submodule.py,6,11,yaml.load,RESOLVED,CUnsafeLoader,UNSAFE_BY_D
 5.1,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
 5.1,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
 5.1,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
-5.1,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,CFullLoader uses FullConstructor (yaml/cyaml.py)
+5.1,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader
 5.1,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
 5.1,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,direct Loader construction
 5.1,f19_loader_none.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_AFFECTED,AFFECTED,AFFECTED,explicit Loader=None; Loader=None defaults to FullLoader with a warning (5.1 to 5.x signature)
@@ -90,7 +90,7 @@ unknown,f24_cyaml_submodule.py,6,11,yaml.load,RESOLVED,CUnsafeLoader,UNSAFE_BY_D
 5.3,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
 5.3,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
 5.3,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
-5.3,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,CFullLoader uses FullConstructor (yaml/cyaml.py)
+5.3,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader
 5.3,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
 5.3,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,AFFECTED,AFFECTED,direct Loader construction
 5.3,f19_loader_none.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_AFFECTED,AFFECTED,AFFECTED,explicit Loader=None; Loader=None defaults to FullLoader with a warning (5.1 to 5.x signature)
@@ -115,7 +115,7 @@ unknown,f24_cyaml_submodule.py,6,11,yaml.load,RESOLVED,CUnsafeLoader,UNSAFE_BY_D
 5.3.1,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
 5.3.1,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
 5.3.1,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
-5.3.1,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,AFFECTED,CFullLoader uses FullConstructor (yaml/cyaml.py)
+5.3.1,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,AFFECTED,INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader
 5.3.1,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
 5.3.1,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,AFFECTED,direct Loader construction
 5.3.1,f19_loader_none.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_AFFECTED,NOT_AFFECTED,AFFECTED,explicit Loader=None; Loader=None defaults to FullLoader with a warning (5.1 to 5.x signature)
@@ -140,7 +140,7 @@ unknown,f24_cyaml_submodule.py,6,11,yaml.load,RESOLVED,CUnsafeLoader,UNSAFE_BY_D
 5.4,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
 5.4,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
 5.4,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
-5.4,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,CFullLoader uses FullConstructor (yaml/cyaml.py)
+5.4,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader
 5.4,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
 5.4,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,direct Loader construction
 5.4,f19_loader_none.py,5,11,yaml.load,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_AFFECTED,NOT_AFFECTED,NOT_AFFECTED,explicit Loader=None; Loader=None defaults to FullLoader with a warning (5.1 to 5.x signature)
@@ -165,7 +165,7 @@ unknown,f24_cyaml_submodule.py,6,11,yaml.load,RESOLVED,CUnsafeLoader,UNSAFE_BY_D
 6.0,f14_kwargs.py,5,11,yaml.load,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,*args/**kwargs may carry Loader
 6.0,f15_getattr.py,5,9,getattr,NEEDS_HUMAN,,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,NEEDS_HUMAN,dynamic access to the yaml module
 6.0,f16_cyaml_loaders.py,5,11,yaml.load,RESOLVED,CSafeLoader,SAFE,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
-6.0,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,CFullLoader uses FullConstructor (yaml/cyaml.py)
+6.0,f16_cyaml_loaders.py,9,11,yaml.load,RESOLVED,CFullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader
 6.0,f16_cyaml_loaders.py,13,11,yaml.load,RESOLVED,CLoader,UNSAFE_BY_DESIGN,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,
 6.0,f17_direct_construction.py,5,13,yaml.FullLoader,RESOLVED,FullLoader,CONSERVATIVE_WARN,NOT_APPLICABLE,NOT_AFFECTED,NOT_AFFECTED,direct Loader construction
 6.0,f19_loader_none.py,5,11,yaml.load,RESOLVED,,TYPE_ERROR_IN_VERSION,NOT_AFFECTED,NOT_APPLICABLE,NOT_APPLICABLE,explicit Loader=None; Loader is a required argument in 6.0+

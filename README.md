@@ -37,9 +37,10 @@ Consequences encoded in the tool:
 - `FullLoader` on 5.4 or later is **not** reported as affected by
   CVE-2020-14343. Its policy stays `CONSERVATIVE_WARN`, because recommending
   `SafeLoader` for untrusted input is a separate, conservative choice.
-- `CFullLoader` gets the same CVE status as `FullLoader`, because
-  `yaml/cyaml.py` builds it on `FullConstructor`. This is inferred from the
-  source; the advisories only name `full_load` and `FullLoader`.
+- **Inference (labelled in every finding's `notes`):** `CFullLoader` gets
+  the same CVE status as `FullLoader`, because `yaml/cyaml.py` builds it on
+  `FullConstructor`. The advisories only name `full_load` and `FullLoader`;
+  this was not confirmed by running the C extension.
 - `Loader`, `UnsafeLoader`, `CLoader`, `CUnsafeLoader` and `unsafe_load*` are
   `UNSAFE_BY_DESIGN`. They are documented as unsafe, so they are not CVEs.
 - With no `--pyyaml-version`, a call whose answer depends on the version is
@@ -48,9 +49,9 @@ Consequences encoded in the tool:
 ## Usage
 
 ```sh
-PYTHONPATH=src python -m pyyaml_loader_lint path/to/code --pyyaml-version 5.4
-PYTHONPATH=src python -m pyyaml_loader_lint path/to/code --format csv
-# or: pip install . && pyyaml-loader-lint ...
+PYTHONPATH=src python3 -m pyyaml_loader_lint path/to/code --pyyaml-version 5.4
+PYTHONPATH=src python3 -m pyyaml_loader_lint path/to/code --format csv
+# or, in a venv: python3 -m venv .venv && . .venv/bin/activate && pip install . && pyyaml-loader-lint ...
 ```
 
 Exit codes: `0` nothing blocking; `1` `UNSAFE_BY_DESIGN` or any `AFFECTED`
@@ -60,8 +61,8 @@ items that need a human or a version.
 ## Tests and results
 
 ```sh
-PYTHONPATH=src python -m unittest discover -s tests -v
-python scripts/gen_results.py            # rewrites results/
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+python3 scripts/gen_results.py            # rewrites results/
 (cd results && sha256sum -c SHA256SUMS)
 ```
 
@@ -77,6 +78,11 @@ python scripts/gen_results.py            # rewrites results/
   `NEEDS_HUMAN` in every version.
 
 Tested locally with Python 3.13.5 and 3.10. Standard library only.
+
+**Coverage is static, not runtime.** The tool sees only calls it can resolve
+in one file. It does not observe what runs at runtime, does not follow
+imports across modules, and does not claim to find every PyYAML load in a
+program. No external verification of results has been performed.
 
 ## Files to read first
 

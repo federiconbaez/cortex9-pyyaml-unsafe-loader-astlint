@@ -22,10 +22,10 @@ biblioteca estándar.
 ## Comandos locales
 
 ```sh
-PYTHONPATH=src python -m unittest discover -s tests -v
-PYTHONPATH=src python -m pyyaml_loader_lint fixtures/code --pyyaml-version 5.3 --format csv
-PYTHONPATH=src python -m pyyaml_loader_lint fixtures/code/f07_load_no_loader.py --pyyaml-version 6.0
-python scripts/gen_results.py /tmp/out && diff -r results /tmp/out
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+PYTHONPATH=src python3 -m pyyaml_loader_lint fixtures/code --pyyaml-version 5.3 --format csv
+PYTHONPATH=src python3 -m pyyaml_loader_lint fixtures/code/f07_load_no_loader.py --pyyaml-version 6.0
+python3 scripts/gen_results.py /tmp/out && diff -r results /tmp/out
 ```
 
 ## Ejercicios graduados

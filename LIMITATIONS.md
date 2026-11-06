@@ -17,7 +17,10 @@
   lock files. Without `--pyyaml-version`, results are `UNKNOWN_VERSION` or
   `DEPENDS_ON_VERSION`. PyYAML 5.1 pre-releases are treated as "loader set
   not modelled"; the advisory ranges are still applied to them.
-- **CFullLoader** shares `FullConstructor` with `FullLoader` in
+- **No runtime coverage.** The tool never runs code, so it cannot see loads
+  reached through dynamic dispatch, other modules, or generated code. It is
+  not a complete inventory of PyYAML use.
+- **CFullLoader (inference)** shares `FullConstructor` with `FullLoader` in
   `yaml/cyaml.py`; giving it the same CVE status is an inference from source,
   not a statement in the advisories.
 - **Policy is a recommendation.** `CONSERVATIVE_WARN` for `FullLoader` on

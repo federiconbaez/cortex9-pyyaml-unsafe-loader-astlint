@@ -219,7 +219,7 @@
    "cve_2017_18342": "NOT_APPLICABLE",
    "cve_2020_1747": "UNKNOWN_VERSION",
    "cve_2020_14343": "UNKNOWN_VERSION",
-   "notes": "CFullLoader uses FullConstructor (yaml/cyaml.py)"
+   "notes": "INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader"
   },
   {
    "path": "f16_cyaml_loaders.py",
@@ -873,7 +873,7 @@
    "cve_2017_18342": "NOT_APPLICABLE",
    "cve_2020_1747": "AFFECTED",
    "cve_2020_14343": "AFFECTED",
-   "notes": "CFullLoader uses FullConstructor (yaml/cyaml.py)"
+   "notes": "INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader"
   },
   {
    "path": "f16_cyaml_loaders.py",
@@ -1200,7 +1200,7 @@
    "cve_2017_18342": "NOT_APPLICABLE",
    "cve_2020_1747": "AFFECTED",
    "cve_2020_14343": "AFFECTED",
-   "notes": "CFullLoader uses FullConstructor (yaml/cyaml.py)"
+   "notes": "INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader"
   },
   {
    "path": "f16_cyaml_loaders.py",
@@ -1527,7 +1527,7 @@
    "cve_2017_18342": "NOT_APPLICABLE",
    "cve_2020_1747": "NOT_AFFECTED",
    "cve_2020_14343": "AFFECTED",
-   "notes": "CFullLoader uses FullConstructor (yaml/cyaml.py)"
+   "notes": "INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader"
   },
   {
    "path": "f16_cyaml_loaders.py",
@@ -1854,7 +1854,7 @@
    "cve_2017_18342": "NOT_APPLICABLE",
    "cve_2020_1747": "NOT_AFFECTED",
    "cve_2020_14343": "NOT_AFFECTED",
-   "notes": "CFullLoader uses FullConstructor (yaml/cyaml.py)"
+   "notes": "INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader"
   },
   {
    "path": "f16_cyaml_loaders.py",
@@ -2181,7 +2181,7 @@
    "cve_2017_18342": "NOT_APPLICABLE",
    "cve_2020_1747": "NOT_AFFECTED",
    "cve_2020_14343": "NOT_AFFECTED",
-   "notes": "CFullLoader uses FullConstructor (yaml/cyaml.py)"
+   "notes": "INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader"
   },
   {
    "path": "f16_cyaml_loaders.py",

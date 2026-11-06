@@ -32,12 +32,19 @@ CVE-2020-14343; su política sigue siendo `CONSERVATIVE_WARN` (recomendar
 `--pyyaml-version`, lo que depende de la versión sale `UNKNOWN_VERSION` o
 `DEPENDS_ON_VERSION`.
 
+**Inferencia (marcada en `notes`):** a `CFullLoader` se le asigna el mismo
+estado CVE que a `FullLoader` porque `cyaml.py` lo construye sobre
+`FullConstructor`; los advisories solo nombran `full_load`/`FullLoader`.
+
+**Cobertura estática, no de ejecución:** solo ve llamadas resolubles en un
+archivo; no observa la ejecución ni sigue imports entre módulos.
+
 ## Uso y pruebas
 
 ```sh
-PYTHONPATH=src python -m pyyaml_loader_lint ruta/al/codigo --pyyaml-version 5.4
-PYTHONPATH=src python -m unittest discover -s tests -v
-python scripts/gen_results.py && (cd results && sha256sum -c SHA256SUMS)
+PYTHONPATH=src python3 -m pyyaml_loader_lint ruta/al/codigo --pyyaml-version 5.4
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+python3 scripts/gen_results.py && (cd results && sha256sum -c SHA256SUMS)
 ```
 
 Los resultados (175 filas, 7 versiones) y sus conteos están descritos en

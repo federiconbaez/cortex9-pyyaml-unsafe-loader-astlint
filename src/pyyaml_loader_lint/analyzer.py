@@ -247,7 +247,7 @@ def classify(func_member: str, loader_expr, has_star: bool, v, bnd) -> dict:
         a, b = _cve_full(v)
         out["cve_2020_1747"], out["cve_2020_14343"] = a, b
         if loader.startswith("C"):
-            notes.append("CFullLoader uses FullConstructor (yaml/cyaml.py)")
+            notes.append("INFERENCE: CVE status copied from FullLoader because cyaml.py builds CFullLoader on FullConstructor; advisories name only full_load/FullLoader")
     else:
         out["policy"] = "SAFE"
     out["notes"] = notes
