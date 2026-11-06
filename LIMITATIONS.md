@@ -27,5 +27,6 @@
   ≥ 5.4 is a conservative choice, not a vulnerability claim.
 - **No exploitation content.** The tool and the fixtures contain no YAML
   documents. Nothing here demonstrates code execution.
-- CI is defined in `.github/workflows/ci.yml` but has only been run locally
-  (Python 3.13.5 and 3.10), not on a hosted runner.
+- CI is defined in `.github/workflows/ci.yml` and runs on GitHub Actions
+  (Python 3.10–3.13; live status: the Actions page linked from the README).
+  It was also run locally with Python 3.13.5 and 3.10.

@@ -1,6 +1,6 @@
 # cortex9-pyyaml-unsafe-loader-astlint
 
-[Español](README.es.md) · [Practice guide](PRACTICE.md)
+[Español](README.es.md) · [Practice guide](PRACTICE.md) · [CI](https://github.com/federiconbaez/cortex9-pyyaml-unsafe-loader-astlint/actions/workflows/ci.yml)
 
 A static checker that reads Python source with `ast.parse` and reports every
 PyYAML loading call it can resolve, with three **separate** answers:
